@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hayden Shoes Human Resource</title>
+    <!-- Link to styles.css -->
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" media='all' type='text/css' href='css/simple-sidebar.css'/>
+
+  <!-- Link to jQuery library -->
+    <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <!-- Link to materialize -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+
+
+   $(function () {
+    $('#departments').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Man Count Per Department'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Product Development',
+                y: 22.00
+            }, {
+                name: 'Public Relations',
+                y: 18.00
+            },{
+                name: 'Sales and Marketing',
+                y: 16.00,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'R&D and Reinvestment',
+                y: 10.00
+            }, {
+                name: 'Finance',
+                y: 10.00
+            }, {
+                name: 'Human Resource',
+                y: 12.00
+            }, {
+                name: 'Information Technology',
+                y: 12.00
+            }]
+        }]
+    });
+});
+
+  </script>
+
+
+
+  <!-- Importing highcharts module -->
+  <script type="text/javascript" src="js/highcharts.js"></script>
+  <script type="text/javascript" src="js/modules/exporting.js"></script>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        Hayden Shoes Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="balance_sheet.html">Balance Sheet</a>
+                </li>
+                <li>
+                    <a href="sales.html">Sales</a>
+                </li>
+                <li>
+                    <a href="customer_relation.html">Consumer Relation</a>
+                </li>
+                <li>
+                    <a href="web_and_mobile_app.html">Web and Mobile App</a>
+                </li>
+                <li>
+                    <a href="hr.html">Human Resources</a>
+                </li>
+                <li>
+                    <a href="operation_cost.html">Operation Cost</a>
+                </li>
+                <li>
+                    <a href="contact_department.html">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+
+            <div class='row'>
+
+                <div class="col s3 m3">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/sample-1.png">
+                      <span class="card-title">Messages</span>
+                    </div>
+                    <div class="card-content">
+                      <p>New messages</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col s3 m3">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/sample-2.png">
+                      <span class="card-title">New Tasks</span>
+                    </div>
+                    <div class="card-content">
+                      <p>Check today's tasks</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col s3 m3">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/sample-3.jpg">
+                      <span class="card-title">Schedule</span>
+                    </div>
+                    <div class="card-content">
+                      <p>Check recent schedule</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col s3 m3">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/sample-4.png">
+                      <span class="card-title">People</span>
+                    </div>
+                    <div class="card-content">
+                      <p>Get contact with others</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class='row'>
+          <div class='col s12 m6'>
+            <div id="departments"></div>
+          </div>
+
+          <div class='col s12 m6'>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Notifications
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <table>
+                      <tr>
+                      <td>
+                      <img src="images/sample-5.png" width = "80px" height = "80px"></td>
+                      <td>
+                      You got a message from Carol: Thank you for your kind consideration of working with Skycraft Consulting.Please update the recent sales performance data. Thanks!
+                    </td></tr>
+                    <tr>
+                      <td>
+                      <img src="images/sample-7.png" width = "80px" height = "80px"></td>
+                      <td>
+                      You got a message from Jason: Thank you for your kind consideration of working with Skycraft Consulting.Please update the recent sales performance data. Thanks!
+                    </td>
+
+                    </tr>
+                  </table>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      New Comments
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Message Sent
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                     <table>
+                       <tr>
+                      <td>
+                     <img src="images/sample-6.png" width = "80px" height = "80px"></td>
+                     <td>
+                     Jason: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                   </td></tr>
+                   <tr>
+                  <td>
+                 <img src="images/sample-6.png" width = "80px" height = "80px"></td>
+                 <td>
+                 Bill: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+               </td></tr>
+                 </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <h5>Project Progress</h5>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+          <span class="sr-only">40% Complete (success)</span>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+          <span class="sr-only">20% Complete</span>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+          <span class="sr-only">60% Complete (warning)</span>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+          <span class="sr-only">80% Complete (danger)</span>
+        </div>
+      </div>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
